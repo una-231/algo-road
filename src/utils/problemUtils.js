@@ -1,6 +1,15 @@
 import { filterKnowledgeTags } from "./tagUtils.js";
 
+let problemsPromise;
+let routesPromise;
+
 export async function loadProblems() {
+  if (problemsPromise) return problemsPromise;
+  problemsPromise = fetchProblems();
+  return problemsPromise;
+}
+
+async function fetchProblems() {
   const response = await fetch(`${import.meta.env.BASE_URL}data/problems.json`);
   if (!response.ok) throw new Error("题库数据加载失败");
   const data = await response.json();
@@ -10,6 +19,12 @@ export async function loadProblems() {
 }
 
 export async function loadRoutes() {
+  if (routesPromise) return routesPromise;
+  routesPromise = fetchRoutes();
+  return routesPromise;
+}
+
+async function fetchRoutes() {
   const response = await fetch(`${import.meta.env.BASE_URL}data/routes.json`);
   if (!response.ok) return [];
   const data = await response.json();

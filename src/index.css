@@ -550,12 +550,18 @@ p {
 .check-pill {
   min-height: 38px;
   padding: 0 10px;
+  min-width: 116px;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
   gap: 7px;
   background: #ffffff;
+  white-space: nowrap;
+}
+
+.check-pill span {
+  white-space: nowrap;
 }
 
 .search-box,
@@ -617,6 +623,31 @@ textarea {
 
 .text-link {
   color: #1d4ed8;
+}
+
+.knowledge-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.toggle-tags {
+  display: none;
+  min-height: 34px;
+  padding: 0 12px;
+}
+
+.load-more {
+  justify-self: center;
+  min-width: 220px;
+  margin-top: 6px;
+}
+
+.result-count {
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
 }
 
 @media (max-width: 760px) {
@@ -704,6 +735,53 @@ textarea {
   .side-panel {
     position: static;
     max-height: none;
+  }
+
+  .knowledge-panel {
+    margin-bottom: 12px;
+  }
+
+  .toggle-tags {
+    display: inline-flex;
+  }
+
+  .knowledge-tags {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+
+  .knowledge-tags.collapsed {
+    max-height: 92px;
+  }
+
+  .knowledge-tags.expanded {
+    max-height: none;
+  }
+
+  .knowledge-tags.collapsed::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 28px;
+    background: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
+    pointer-events: none;
+  }
+
+  .status-filter {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+  }
+
+  .check-pill {
+    min-width: 0;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 10px;
   }
 
   .problem-row {
