@@ -1,0 +1,112 @@
+[
+  {
+    "routeId": "simulation-enumeration",
+    "routeName": "模拟与枚举",
+    "problems": [
+      "P1003",
+      "P1008",
+      "P1014",
+      "P1611",
+      "P1618",
+      "P1702"
+    ]
+  },
+  {
+    "routeId": "string",
+    "routeName": "字符串",
+    "problems": [
+      "P3370",
+      "P6553",
+      "P9680",
+      "P11279"
+    ]
+  },
+  {
+    "routeId": "sort-struct",
+    "routeName": "排序与结构体",
+    "problems": [
+      "P1459",
+      "P7259",
+      "P9959",
+      "P16468"
+    ]
+  },
+  {
+    "routeId": "recurrence",
+    "routeName": "递推",
+    "problems": [
+      "P1028",
+      "P1226",
+      "P1760",
+      "P1096"
+    ]
+  },
+  {
+    "routeId": "basic-dp",
+    "routeName": "基础动态规划",
+    "problems": [
+      "P1048",
+      "P1049",
+      "P1060",
+      "P1091",
+      "P1115",
+      "P1164",
+      "P1507"
+    ]
+  },
+  {
+    "routeId": "dfs-bfs",
+    "routeName": "DFS / BFS",
+    "problems": [
+      "P1162",
+      "P1331",
+      "P1451",
+      "P1460",
+      "P1506",
+      "P1536",
+      "P1700"
+    ]
+  },
+  {
+    "routeId": "greedy",
+    "routeName": "贪心",
+    "problems": [
+      "P1031",
+      "P1094",
+      "P1109",
+      "P1181",
+      "P1190"
+    ]
+  },
+  {
+    "routeId": "binary-prefix",
+    "routeName": "二分与前缀和",
+    "problems": [
+      "P3184",
+      "P4771",
+      "P8160",
+      "P14063",
+      "P15452"
+    ]
+  },
+  {
+    "routeId": "basic-data-structure",
+    "routeName": "基础数据结构",
+    "problems": [
+      "P4085",
+      "P6510",
+      "P12000",
+      "P1295"
+    ]
+  },
+  {
+    "routeId": "union-graph",
+    "routeName": "并查集与图论基础",
+    "problems": [
+      "P1195",
+      "P1396",
+      "P1546",
+      "P1783"
+    ]
+  }
+]

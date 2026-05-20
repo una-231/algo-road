@@ -1,0 +1,97 @@
+export const KNOWLEDGE_TAGS = new Set([
+  "模拟",
+  "枚举",
+  "暴力",
+  "字符串",
+  "KMP",
+  "字典序",
+  "哈希",
+  "字符串哈希",
+  "排序",
+  "结构体",
+  "递推",
+  "递归",
+  "动态规划 DP",
+  "线性 DP",
+  "背包 DP",
+  "树形 DP",
+  "状压 DP",
+  "区间 DP",
+  "数位 DP",
+  "记忆化搜索",
+  "搜索",
+  "深度优先搜索 DFS",
+  "广度优先搜索 BFS",
+  "贪心",
+  "二分",
+  "三分",
+  "前缀和",
+  "差分",
+  "双指针 two-pointer",
+  "离散化",
+  "分治",
+  "倍增",
+  "位运算",
+  "数学",
+  "数论",
+  "组合数学",
+  "容斥原理",
+  "素数判断,质数,筛法",
+  "最大公约数 gcd",
+  "高精度",
+  "概率论,统计",
+  "博弈论",
+  "构造",
+  "Ad-hoc",
+  "分类讨论",
+  "图论",
+  "图论建模",
+  "最短路",
+  "生成树",
+  "拓扑排序",
+  "二分图",
+  "强连通分量",
+  "最近公共祖先 LCA",
+  "树",
+  "树上问题",
+  "并查集",
+  "基础数据结构",
+  "线性数据结构",
+  "栈",
+  "队列",
+  "链表",
+  "堆",
+  "单调栈",
+  "单调队列",
+  "树状数组",
+  "线段树",
+  "平衡树",
+  "字典树 Trie",
+  "计算几何",
+]);
+
+const ALIASES = new Map([
+  ["动态规划", "动态规划 DP"],
+  ["DP", "动态规划 DP"],
+  ["背包", "背包 DP"],
+  ["DFS", "深度优先搜索 DFS"],
+  ["BFS", "广度优先搜索 BFS"],
+  ["two-pointer", "双指针 two-pointer"],
+  ["gcd", "最大公约数 gcd"],
+  ["Trie", "字典树 Trie"],
+]);
+
+export function normalizeKnowledgeTag(tag) {
+  const text = String(tag || "").trim();
+  return ALIASES.get(text) || text;
+}
+
+export function filterKnowledgeTags(tags) {
+  return [
+    ...new Set(
+      (tags || [])
+        .map(normalizeKnowledgeTag)
+        .filter((tag) => KNOWLEDGE_TAGS.has(tag)),
+    ),
+  ];
+}
