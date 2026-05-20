@@ -5,7 +5,7 @@ React + Vite 本地前端应用。题库和路线运行时只读取 `public/data
 ## 项目结构
 
 ```text
-luogu-study-helper
+algo-road
 ├── scripts
 │   ├── fetchLuoguProblems.js
 │   ├── generateRoutes.js
